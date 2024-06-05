@@ -69,9 +69,9 @@ const MyPicture = ({ onClose }) => {
         ))}
       </PerfectScrollbar>
 
-      <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b]">
+      {/* <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b]">
         <div className="flex text-white">3 Items |</div>
-      </div>
+      </div> */}
 
       {enlargedImage && (
         <div
