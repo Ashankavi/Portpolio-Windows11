@@ -8,13 +8,13 @@ import ChromeB from '../Assets/Desktop/Chrome.png';
 import CVFiles from '../Assets/Desktop/CVFile.png';
 import AboutMeIcon from '../Assets/Desktop/aboutme.png';
 
-import ThisPC from './Folders/ThisPC';
-import RecycleBin from './Folders/RecycleBin';
-import Chrome from './Folders/Chrome';
-import MyResume from './Folders/MyResume';
-import AboutMe from './Folders/AboutMe';
-import MyProjects from './Folders/MyProjects';
-import MyFiles from './Folders/MyFiles';
+import ThisPC from './Desktop-Folders/ThisPC';
+import RecycleBin from './Desktop-Folders/RecycleBin';
+import Chrome from './Desktop-Folders/Chrome';
+import MyResume from './Desktop-Folders/MyResume';
+import AboutMe from './Desktop-Folders/AboutMe';
+import MyProjects from './Desktop-Folders/MyProjects';
+import MyFiles from './Desktop-Folders/MyFiles';
 import Taskbar from './Taskbar';
 
 const Desktop = () => {
