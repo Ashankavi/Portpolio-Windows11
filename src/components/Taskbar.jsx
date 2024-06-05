@@ -7,6 +7,11 @@ import TrashBUCKET from '../Assets/Desktop/TrashBucket.png';
 import ChromeB from '../Assets/Desktop/Chrome.png';
 import CVFiles from '../Assets/Desktop/CVFile.png';
 import AboutMeIcon from '../Assets/Desktop/aboutme.png';
+import ReactIcons from './Assets/MyProject/reactIcon.png';
+
+import ReactProject from '../components/My-Project-Folder/ReactProject'; 
+import UiUxProject from '../components/My-Project-Folder/UiUxProject'; 
+import HtmlProject from '../components/My-Project-Folder/HtmlProject'; 
 
 const icons = {
   thisPC: ThisPCIcon,
@@ -16,6 +21,7 @@ const icons = {
   myResume: CVFiles,
   aboutMe: AboutMeIcon,
   myProjects: MyFilesIcon,
+  reactProject: ReactIcons,
 };
 
 const names = {
@@ -26,6 +32,8 @@ const names = {
   myResume: 'My Resume',
   aboutMe: 'About Me',
   myProjects: 'My Projects',
+  reactProject: 'React Project',
+
 };
 
 const Taskbar = ({ openWindows }) => {

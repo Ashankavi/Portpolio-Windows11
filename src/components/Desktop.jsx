@@ -43,52 +43,55 @@ const Desktop = () => {
   };
 
   return (
-    <div className="relative flex w-auto h-[100vh] bg-cover" style={{ backgroundImage: `url(${Wallpaper})` }}>
+    <div className="relative flex flex-row w-auto h-[100vh] bg-cover" style={{ backgroundImage: `url(${Wallpaper})` }}>
       <div className="flex flex-col text-white text-[12px] space-y-2 p-4">
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('thisPC')}>
+          <div className="flex flex-col items-center pt-5 pl-5 pr-5 ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('thisPC')}>
             <img className="h-[35px] w-[40px] bg-cover" src={ThisPCIcon} alt="This PC" />
             <h1 className="mt-1 mb-[15px]">This PC</h1>
           </div>
         </Draggable>
 
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('myFiles')}>
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myFiles')}>
             <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Files" />
             <h1 className="mt-1 mb-[15px]">My Files</h1>
           </div>
         </Draggable>
 
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('recycleBin')}>
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('recycleBin')}>
             <img className="h-[40px] w-[40px] bg-cover" src={TrashBUCKET} alt="Recycle Bin" />
             <h1 className="mt-1 mb-[15px]">Recycle Bin</h1>
           </div>
         </Draggable>
 
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('chrome')}>
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('chrome')}>
             <img className="h-[40px] w-[40px] bg-cover" src={ChromeB} alt="Google Chrome" />
             <h1 className="mt-1 mb-[15px]">Google <br />Chrome</h1>
           </div>
         </Draggable>
 
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('myResume')}>
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myResume')}>
             <img className="h-[35px] w-[40px] bg-cover" src={CVFiles} alt="My Resume" />
             <h1 className="mt-1 mb-[15px]">My Resume</h1>
           </div>
         </Draggable>
 
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('aboutMe')}>
-            <img className="h-[40px] w-[40px] bg-cover" src={AboutMeIcon} alt="About Me" />
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] ml-[-18px]  hover:bg-gray-500" onDoubleClick={() => handleOpen('aboutMe')}>
+            <img className="h-[40px] w-[40px] bg-cover border border-white rounded-[50%]" src={AboutMeIcon} alt="About Me" />
             <h1 className="mt-1 mb-[15px]">About Me</h1>
           </div>
         </Draggable>
+      </div>
 
+      {/* Right side column */}
+      <div className="flex flex-col text-white text-[12px] space-y-2 pt-4">
         <Draggable>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('myProjects')}>
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myProjects')}>
             <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Projects" />
             <h1 className="mt-1 mb-[15px]">My Projects</h1>
           </div>

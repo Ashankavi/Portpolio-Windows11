@@ -45,7 +45,7 @@ const ThisPC = ({ onClose }) => {
       minWidth={380}
       minHeight={400}
       bounds="parent"
-      className="bg-[#202020] border-zinc-200 rounded-[10px] shadow-lg"
+      className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
     >
       <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
       <img className="h-[20px] w-[20px] bg-cover" src={ThisPCIcon} alt="This PC" />
@@ -63,16 +63,16 @@ const ThisPC = ({ onClose }) => {
         </div>
       </div>
       
-      <div className='flex flex-wrap flex-row p-[20px] text-white'>
-      <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('myFiles')}>
+      <div className='flex flex-wrap flex-row p-[20px] text-white gap-8'>
+      <div className="flex flex-col items-center p-1 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myFiles')}>
             <img className="h-[40px] w-[200px] bg-cover" src={DiskC} alt="My Files" />
             <h1 className="mt-1 mb-[15px]">Local Disk(C:)</h1>
           </div>
-          <div className="flex flex-col items-center ml-8 text-end" onDoubleClick={() => handleOpen('myFiles')}>
+          <div className="flex flex-col items-center p-1 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myFiles')}>
           <img className="h-[40px] w-[200px] bg-cover" src={DiskD} alt="My Files" />
             <h1 className="mt-1 mb-[15px]">New Volume(D:)</h1>
           </div>
-          <div className="flex flex-col items-center ml-8" onDoubleClick={() => handleOpen('myFiles')}>
+          <div className="flex flex-col items-center p-1 mt-[-5px] ml-[-5px] hover:bg-gray-500 " onDoubleClick={() => handleOpen('myFiles')}>
           <img className="h-[40px] w-[200px] bg-cover" src={DiskE} alt="My Files" />
             <h1 className="mt-1 mb-[15px]">New Volume(E:)</h1>
           </div>

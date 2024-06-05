@@ -44,7 +44,7 @@ const MyResume = ({ onClose }) => {
       minWidth={380}
       minHeight={400}
       bounds="parent"
-      className="bg-[#202020] border-zinc-200 rounded-[10px] shadow-lg"
+      className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
     >
       <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
         <img className="h-[20px] w-[20px] bg-cover" src={MyFilesIcon} alt="This PC" />
@@ -63,17 +63,18 @@ const MyResume = ({ onClose }) => {
       </div>
 
   <div className='flex items-center'>
-      <div className='flex flex-wrap flex-row p-[20px]  text-white'>
-        <div className="flex flex-col items-center">
+      <div className='flex flex-wrap flex-row p-[20px] gap-8  text-white'>
+
+        <div className="flex flex-col text-center justify-center items-center py-5 px-8 ml-[-5px] hover:bg-gray-500 ">
           <a href={MyCvPDF} download="MyCV.pdf"> {/* Link to MyCV PDF */}
-            <img className="h-[40px] w-[40px] bg-cover" src={Chrome} alt="My Files" />
-            <h1 className="mt-1 mb-[15px]">My CV</h1>
+            <img className="h-[40px] w-[40px] bg-cover" src={Chrome} alt="My Resume" />
+            <h1 className="mt-1 mb-[15px]">My <br />Resume</h1>
           </a>
         </div>
 
-        <div className="flex flex-col items-center ml-8 text-center ">
+        <div className="flex flex-col items-center py-5 px-8 ml-[-5px] hover:bg-gray-500 ">
           <a href={MyLetterPDF} download="MyLetter.pdf"> {/* Link to CoverLetter PDF */}
-            <img className="h-[40px] w-[40px] bg-cover" src={Chrome} alt="My Files" />
+            <img className="h-[40px] w-[40px] bg-cover" src={Chrome} alt="My Letter" />
             <h1 className="mt-1 mb-[15px]">Cover <br /> Letter</h1>
           </a>
         </div>

@@ -36,17 +36,55 @@ const ReactProject = ({ onClose }) => {
       </div>
 
       <div className='flex flex-wrap flex-row p-[20px] text-white'>
-        <div className="flex flex-col items-center">
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
           <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
-          <h1 className="mt-1 mb-[15px]">Local Disk(C:)</h1>
+          <h1 className="mt-1 mb-[15px]">Project 01</h1>
         </div>
-        <div className="flex flex-col items-center ml-8 text-end">
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
         <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
-          <h1 className="mt-1 mb-[15px]">New Volume(D:)</h1>
+          <h1 className="mt-1 mb-[15px]">Project 02</h1>
         </div>
-        <div className="flex flex-col items-center ml-8">
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
         <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
-          <h1 className="mt-1 mb-[15px]">New Volume(E:)</h1>
+          <h1 className="mt-1 mb-[15px]">Project 03</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 04</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 05</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 06</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 07</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 08</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 09</h1>
+        </div>
+
+        <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500">
+        <img className="h-[60px] w-[60px] bg-cover" src={ReactIcons} alt="Disk C" />
+          <h1 className="mt-1 mb-[15px]">Project 10</h1>
         </div>
       </div>
 

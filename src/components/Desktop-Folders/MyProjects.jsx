@@ -37,11 +37,10 @@ const MyProjects = ({ onClose }) => {
           width: 850,
           height: 400,
         }}
-        minWidth={380}
+        minWidth={280}
         minHeight={400}
         bounds="parent"
-        className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
-      >
+        className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg" >
       <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
           <img className="h-[20px] w-[20px] bg-cover" src={MyFilesIcon} alt="This PC" />
           <div className="flex text-white">My Project</div>
@@ -58,22 +57,22 @@ const MyProjects = ({ onClose }) => {
           </div>
         </div>
 
-        <div className='flex flex-wrap flex-row p-[20px] text-white'>
-          <div className="flex flex-col items-center" onDoubleClick={() => handleOpen('reactProject')}>
+        <div className='flex flex-wrap flex-row p-[20px] gap-8 text-white'>
+          <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('reactProject')}>
             <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Files" />
-            <h1 className="mt-1 mb-[15px]">React Project</h1>
+            <h1 className="mt-1 mb-[15px]">React <br /> Project</h1>
           </div>
-          <div className="flex flex-col items-center ml-8 text-end" onDoubleClick={() => handleOpen('uiUxProject')}>
+          <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('uiUxProject')}>
             <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Files" />
-            <h1 className="mt-1 mb-[15px]">UI/UX Project</h1>
+            <h1 className="mt-1 mb-[15px]">UI/UX <br /> Project</h1>
           </div>
-          <div className="flex flex-col items-center ml-8" onDoubleClick={() => handleOpen('htmlProject')}>
+          <div className="flex flex-col items-center text-center pt-4 px-7 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('htmlProject')}>
             <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Files" />
-            <h1 className="mt-1 mb-[15px]">HTML Project</h1>
+            <h1 className="mt-1 mb-[15px]">HTML <br />Project</h1>
           </div>
         </div>
 
-        <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b]">
+        <div className="flex mt-[100px] items-end p-2 rounded-b-[10px] bg-[#2b2b2b]">
           <div className="flex text-white">3 Items |</div>
         </div>
       </Rnd>
