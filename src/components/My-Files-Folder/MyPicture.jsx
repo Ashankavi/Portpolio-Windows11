@@ -7,7 +7,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import MyFilesIcon from '../Assets/Desktop/MyFile.png';
 import ReactIcons from '../Assets/MyProject/reactIcon.png';
 
-const RecycleBin = ({ onClose }) => {
+const MyPicture = ({ onClose }) => {
   return (
     <Rnd
       default={{
@@ -96,5 +96,5 @@ const RecycleBin = ({ onClose }) => {
   );
 };
 
-export default RecycleBin;
+export default MyPicture;
 

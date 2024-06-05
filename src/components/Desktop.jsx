@@ -44,7 +44,7 @@ const Desktop = () => {
 
   return (
     <div className="relative flex flex-row w-auto h-[100vh] bg-cover" style={{ backgroundImage: `url(${Wallpaper})` }}>
-      <div className="flex flex-col text-white text-[12px] space-y-2 p-4">
+      <div className="flex flex-col flex-wrap text-white text-[12px] space-y-2 p-4 ">
         <Draggable>
           <div className="flex flex-col items-center pt-5 pl-5 pr-5 ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('thisPC')}>
             <img className="h-[35px] w-[40px] bg-cover" src={ThisPCIcon} alt="This PC" />
@@ -86,17 +86,16 @@ const Desktop = () => {
             <h1 className="mt-1 mb-[15px]">About Me</h1>
           </div>
         </Draggable>
-      </div>
 
-      {/* Right side column */}
-      <div className="flex flex-col text-white text-[12px] space-y-2 pt-4">
         <Draggable>
-          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myProjects')}>
-            <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Projects" />
+          <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px]  hover:bg-gray-500" onDoubleClick={() => handleOpen('myProjects')}>
+            <img className="h-[35px] w-[40px] bg-cover" src={MyFilesIcon} alt="My Files" />
             <h1 className="mt-1 mb-[15px]">My Projects</h1>
           </div>
         </Draggable>
+
       </div>
+
 
       {openWindows.thisPC && <ThisPC onClose={() => handleClose('thisPC')} />}
       {openWindows.myFiles && <MyFiles onClose={() => handleClose('myFiles')} />}
