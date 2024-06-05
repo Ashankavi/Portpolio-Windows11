@@ -31,7 +31,7 @@ const MyPicture = ({ onClose }) => {
     <Rnd
       default={{
         x: 250,
-        y: 150,
+        y: 20,
         width: 850,
         height: 500,
       }}
@@ -69,17 +69,24 @@ const MyPicture = ({ onClose }) => {
         ))}
       </PerfectScrollbar>
 
-      {/* <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b]">
-        <div className="flex text-white">3 Items |</div>
-      </div> */}
-
       {enlargedImage && (
-        <div
-          className="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-          onClick={handleCloseEnlarged}
+        <Rnd
+          default={{
+            x: window.innerWidth / 4,
+            y: window.innerHeight / 25,
+            width: 550,
+            height: 550,
+          }}
+          bounds="window"
+          className="fixed flex items-center justify-center px-20 pl-20 bg-black bg-opacity-75 "
         >
-          <img src={enlargedImage} alt="Enlarged" className="max-w-[500px] max-h-[500px]" />
-        </div>
+          <div className="relative">
+            <button onClick={handleCloseEnlarged} className="absolute p-1 bg-red-500 rounded top-2 right-2 hover:bg-red-700">
+              <XIcon className="w-6 h-6 text-white" />
+            </button>
+            <img src={enlargedImage} alt="Enlarged" className="max-w-[550px] max-h-[550px]" />
+          </div>
+        </Rnd>
       )}
     </Rnd>
   );

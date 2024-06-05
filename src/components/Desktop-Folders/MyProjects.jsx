@@ -7,6 +7,7 @@ import ReactProject from '../My-Project-Folder/ReactProject';
 import UiUxProject from '../My-Project-Folder/UiUxProject'; 
 import HtmlProject from '../My-Project-Folder/HtmlProject'; 
 
+
 const MyProjects = ({ onClose }) => {
   const [openWindows, setOpenWindows] = useState({
     reactProject: false,

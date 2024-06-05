@@ -3,8 +3,8 @@ import { Rnd } from 'react-rnd';
 import { XIcon, MinusIcon, PlusSmIcon } from '@heroicons/react/outline';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
-import MyFilesIcon from '../Assets/Desktop/MyFile.png';
-import ReactIcons from '../Assets/MyProject/reactIcon.png';
+import MyMusicIcon from '../Assets/MyFiles/MusicIcon.png'
+import SpotifyIcon from '../Assets/MyFiles/spotifyIcons.png'
 
 const MyMusic = ({ onClose }) => {
   const handleFolderDoubleClick = (link) => {
@@ -12,15 +12,15 @@ const MyMusic = ({ onClose }) => {
   };
 
   const folders = [
-    { name: 'Business Landing', link: 'https://github.com/Ashankavi/business-react-site', icon: ReactIcons },
-    { name: 'Hospital Website', link: 'https://github.com/Ashankavi/hospital-website', icon: ReactIcons },
-    { name: 'My Portfolio', link: 'https://github.com/Ashankavi/My-Main-Portfolio', icon: ReactIcons },
-    { name: 'Hfs Website', link: 'https://github.com/Ashankavi/HFS-Official-Site', icon: ReactIcons },
-    { name: 'Photographer', link: 'https://github.com/Ashankavi/photographer-portfolio', icon: ReactIcons },
-    { name: 'Navbar', link: 'https://github.com/Ashankavi/React-Tailwind-Navbars', icon: ReactIcons },
-    { name: 'tailwind cards', link: 'https://github.com/Ashankavi/React-Tailwinds-Image-Sliders', icon: ReactIcons },
-    { name: 'Landing Page', link: 'https://github.com/Ashankavi/feature-landing-page', icon: ReactIcons },
-    { name: 'Portfolio 2', link: 'https://www.figma.com/design/dQx8E46He1CDkShRyUaaO2/Untitled?node-id=1-2&t=fqkNk7wxMEZaEbxQ-1', icon: ReactIcons },
+    { name: 'Music 1', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 2', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 3', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 4', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 5', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 6', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 7', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 8', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
+    { name: 'Music 9', link: 'https://open.spotify.com/track/0LSJTwsg6rOWr7S77txE3p?si=6983814a811f430f', icon: SpotifyIcon },
   ];
 
   return (
@@ -37,8 +37,8 @@ const MyMusic = ({ onClose }) => {
       className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
     >
       <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-default">
-        <img className="h-[20px] w-[20px] bg-cover" src={MyFilesIcon} alt="This PC" />
-        <div className="flex text-white">UI/UX  Project</div>
+        <img className="h-[19px] w-[20px] bg-cover" src={MyMusicIcon} alt="This PC" />
+        <div className="flex text-white">My Music</div>
         <div className="flex space-x-2">
           <button className="p-2 rounded hover:bg-gray-500">
             <MinusIcon className="w-4 h-4 text-white" />

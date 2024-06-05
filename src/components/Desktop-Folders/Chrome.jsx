@@ -7,13 +7,7 @@ import ChromeB from '../Assets/Desktop/Chrome.png';
 
 const Chrome = ({ onClose }) => {
   const [openWindows, setOpenWindows] = useState({
-    thisPC: false,
-    recycleBin: false,
     chrome: false,
-    myResume: false,
-    aboutMe: false,
-    myProjects: false,
-    myFiles: false,
   });
 
   const handleOpen = (windowName) => {
