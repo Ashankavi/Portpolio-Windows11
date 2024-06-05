@@ -51,7 +51,7 @@ const MyFiles = ({ onClose }) => {
       bounds="parent"
       className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
     >
-      <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
+      <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-default">
       <img className="h-[20px] w-[20px] bg-cover" src={MyFilesIcon} alt="This PC" />
         <div className="flex text-white ">My Files</div>
         <div className="flex space-x-2 ">
@@ -67,7 +67,7 @@ const MyFiles = ({ onClose }) => {
         </div>
       </div>
       
-      <div className='flex flex-wrap flex-row p-[20px] gap-2 text-white'>
+      <div className='flex flex-wrap flex-row p-[20px] gap-2 text-white cursor-default'>
 
       <div className="flex flex-col items-center pt-4 pl-5 pr-5 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myFiles')}>
       <img className="h-[35px] w-[40px] bg-cover" src={DesktopIcon} alt="My Files" />

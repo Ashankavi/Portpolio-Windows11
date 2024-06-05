@@ -45,9 +45,9 @@ const ThisPC = ({ onClose }) => {
       minWidth={380}
       minHeight={400}
       bounds="parent"
-      className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
+      className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg cursor-default"
     >
-      <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
+      <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-default">
       <img className="h-[20px] w-[20px] bg-cover" src={ThisPCIcon} alt="This PC" />
         <div className="flex text-white ">This PC</div>
         <div className="flex space-x-2 ">
@@ -63,7 +63,7 @@ const ThisPC = ({ onClose }) => {
         </div>
       </div>
       
-      <div className='flex flex-wrap flex-row p-[20px] text-white gap-8'>
+      <div className='flex flex-wrap flex-row p-[20px] text-white gap-8 cursor-default'>
       <div className="flex flex-col items-center p-1 mt-[-5px] ml-[-5px] hover:bg-gray-500" onDoubleClick={() => handleOpen('myFiles')}>
             <img className="h-[40px] w-[200px] bg-cover" src={DiskC} alt="My Files" />
             <h1 className="mt-1 mb-[15px]">Local Disk(C:)</h1>
@@ -78,7 +78,7 @@ const ThisPC = ({ onClose }) => {
           </div>
           </div>
           {/* End Section */}
-          <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b] ">
+          <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b] cursor-default ">
         <div className="flex text-white ">3 Items |</div>
       </div>
 

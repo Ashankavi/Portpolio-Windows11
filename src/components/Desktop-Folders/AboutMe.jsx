@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import { XIcon, MinusIcon, PlusSmIcon } from '@heroicons/react/outline';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 import AboutMeIcon from '../Assets//Desktop/aboutme.png';
 
 const AboutMe = ({ onClose }) => {
@@ -34,10 +35,10 @@ const AboutMe = ({ onClose }) => {
         x: 160,
         y: 20,
         width: 800,
-        height: 400,
+        height: 500,
       }}
       minWidth={450}
-      minHeight={400}
+      minHeight={300}
       maxHeight={680}
       bounds="parent"
       className="bg-[#202020] border-zinc-200 rounded-[10px] shadow-lg"
@@ -58,7 +59,7 @@ const AboutMe = ({ onClose }) => {
         </div>
       </div>
 
-      <div className="flex flex-col p-4 text-white overflow-y-auto h-[calc(100%_-_40px)]">
+      <PerfectScrollbar className="flex flex-col p-4 text-white overflow-y-auto h-[calc(100%_-_40px)]">
         <h2 className="text-3xl font-semibold uppercase">Ashan Kavindu</h2>
         <h2 className="text-xl font-semibold uppercase">( SOFTWARE ENGINNERING UNDERGRADUATE )</h2>
         <h2 className="mt-8 text-lg font-semibold uppercase">About Me</h2>
@@ -83,7 +84,7 @@ const AboutMe = ({ onClose }) => {
 
         <h2 className="mt-2 text-[15px] font-semibold">VIDYALOKA COLLEGE, GALLE</h2>
         <p className="mt-2">G.C.E. Advanced Level (2020) <br /> G.C.E. Ordinary Level (2017)</p>
-      </div>
+      </PerfectScrollbar>
     </Rnd>
   );
 };

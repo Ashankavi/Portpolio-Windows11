@@ -7,7 +7,6 @@ import Chrome from '../Assets/Desktop/Chrome.png';
 import MyCvPDF from '../Assets/MyResume/MyCv.pdf'; // Correct relative path to MyCV
 import MyLetterPDF from '../Assets/MyResume/MyLetter.pdf'; // Correct relative path to Cover Letter
 
-
 const MyResume = ({ onClose }) => {
   const [openWindows, setOpenWindows] = useState({
     thisPC: false,
@@ -46,45 +45,43 @@ const MyResume = ({ onClose }) => {
       bounds="parent"
       className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
     >
-      <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
-        <img className="h-[20px] w-[20px] bg-cover" src={MyFilesIcon} alt="This PC" />
-        <div className="flex text-white ">My Resume</div>
-        <div className="flex space-x-2 ">
-          <button className="p-2 rounded hover:bg-gray-500">
+      <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-default">
+        <img className="h-[20px] w-[20px] bg-cover cursor-default" src={MyFilesIcon} alt="This PC" />
+        <div className="flex text-white cursor-default">My Resume</div>
+        <div className="flex space-x-2 cursor-default">
+          <button className="p-2 rounded cursor-default hover:bg-gray-500">
             <MinusIcon className="w-4 h-4 text-white" />
           </button>
-          <button className="p-2 rounded hover:bg-gray-500">
+          <button className="p-2 rounded cursor-default hover:bg-gray-500">
             <PlusSmIcon className="w-4 h-4 text-white" />
           </button>
-          <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">
+          <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d] cursor-default">
             <XIcon className="w-4 h-4 text-white" />
           </button>
         </div>
       </div>
 
-  <div className='flex items-center'>
-      <div className='flex flex-wrap flex-row p-[20px] gap-8  text-white'>
+      <div className='flex items-center cursor-default'>
+        <div className='flex flex-wrap flex-row p-[20px] gap-8 text-white cursor-default'>
+          <div className="flex flex-col text-center justify-center items-center py-5 px-8 ml-[-5px] hover:bg-gray-500 cursor-default">
+            <a href={MyCvPDF} download="MyCV.pdf"> {/* Link to MyCV PDF */}
+              <img className="h-[40px] w-[40px] bg-cover cursor-default" src={Chrome} alt="My Resume" />
+              <h1 className="mt-1 mb-[15px] cursor-default">My <br />Resume</h1>
+            </a>
+          </div>
 
-        <div className="flex flex-col text-center justify-center items-center py-5 px-8 ml-[-5px] hover:bg-gray-500 ">
-          <a href={MyCvPDF} download="MyCV.pdf"> {/* Link to MyCV PDF */}
-            <img className="h-[40px] w-[40px] bg-cover" src={Chrome} alt="My Resume" />
-            <h1 className="mt-1 mb-[15px]">My <br />Resume</h1>
-          </a>
+          <div className="flex flex-col items-center py-5 px-8 ml-[-5px] hover:bg-gray-500 cursor-default">
+            <a href={MyLetterPDF} download="MyLetter.pdf"> {/* Link to CoverLetter PDF */}
+              <img className="h-[40px] w-[40px] bg-cover cursor-default" src={Chrome} alt="My Letter" />
+              <h1 className="mt-1 mb-[15px] cursor-default">Cover <br /> Letter</h1>
+            </a>
+          </div>
         </div>
-
-        <div className="flex flex-col items-center py-5 px-8 ml-[-5px] hover:bg-gray-500 ">
-          <a href={MyLetterPDF} download="MyLetter.pdf"> {/* Link to CoverLetter PDF */}
-            <img className="h-[40px] w-[40px] bg-cover" src={Chrome} alt="My Letter" />
-            <h1 className="mt-1 mb-[15px]">Cover <br /> Letter</h1>
-          </a>
-        </div>
-      </div>
       </div>
       {/* End Section */}
-      <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b] ">
-        <div className="flex text-white ">2 Items |</div>
+      <div className="flex items-end p-2 rounded-b-[10px] bg-[#2b2b2b] cursor-default">
+        <div className="flex text-white cursor-default">2 Items |</div>
       </div>
-
     </Rnd>
   );
 };
