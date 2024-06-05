@@ -45,14 +45,14 @@ const Taskbar = ({ openWindows }) => {
   return (
     <div className="fixed bottom-0 left-0 flex items-center justify-between w-full h-10 text-white bg-gray-800">
       {/* Weather Section */}
-      <div className="flex items-center ml-4 space-x-2">
+      <div className="flex items-center space-x-2 py-[8px] px-[10px]  hover:bg-[#d6d6d638]">
         <WiDaySunny className="w-6 h-6" />
         <span>75°F</span>
       </div>
 
       {/* Center Section */}
       <div className="absolute flex items-center space-x-4 transform -translate-x-1/2 left-1/2">
-        <FaWindows className="w-6 h-6" />
+        <FaWindows className="w-7 h-7  text-white hover:text-[#0b46d4]" />
         {/* Render open folder icons and names */}
         {Object.keys(openWindows).map(
           (window) =>
@@ -66,7 +66,7 @@ const Taskbar = ({ openWindows }) => {
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center mr-4 space-x-4">
+      <div className="flex items-center space-x-4 py-[5px] px-[10px]  hover:bg-[#d6d6d638]">
     
         <div className="flex flex-col leading-[15px] text-[12px]  items-center ">
           <span>{time}</span>

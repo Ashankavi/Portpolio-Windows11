@@ -17,6 +17,7 @@ const ReactProject = ({ onClose }) => {
     { name: 'My Portfolio', link: 'https://github.com/Ashankavi/My-Main-Portfolio', icon: ReactIcons },
     { name: 'Hfs Website', link: 'https://github.com/Ashankavi/HFS-Official-Site', icon: ReactIcons },
     { name: 'Photographer', link: 'https://github.com/Ashankavi/photographer-portfolio', icon: ReactIcons },
+    { name: 'PC Portfolio', link: 'https://github.com/Ashankavi/Windows11-Portfolio', icon: ReactIcons },
     { name: 'Navbar', link: 'https://github.com/Ashankavi/React-Tailwind-Navbars', icon: ReactIcons },
     { name: 'tailwind cards', link: 'https://github.com/Ashankavi/React-Tailwinds-Image-Sliders', icon: ReactIcons },
     { name: 'Landing Page', link: 'https://github.com/Ashankavi/feature-landing-page', icon: ReactIcons },
@@ -38,7 +39,7 @@ const ReactProject = ({ onClose }) => {
     >
       <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-default">
         <img className="h-[20px] w-[20px] bg-cover" src={MyFilesIcon} alt="This PC" />
-        <div className="flex text-white">UI/UX  Project</div>
+        <div className="flex text-white">React Project</div>
         <div className="flex space-x-2">
           <button className="p-2 rounded hover:bg-gray-500">
             <MinusIcon className="w-4 h-4 text-white" />

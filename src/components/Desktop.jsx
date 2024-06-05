@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
+
 import Wallpaper from '../Assets/Desktop/wallpaper.jpg';
 import ThisPCIcon from '../Assets/Desktop/ThisPC.png';
 import MyFilesIcon from '../Assets/Desktop/MyFile.png';
@@ -61,7 +62,7 @@ const Desktop = () => {
 
         <Draggable>
           <div className="flex flex-col items-center pt-[15px] pl-[15px] pr-[15px] ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('recycleBin')}>
-            <img className="h-[40px] w-[40px] bg-cover" src={TrashBUCKET} alt="Recycle Bin" />
+            <img className="h-[50px] w-[40px] bg-cover" src={TrashBUCKET} alt="Recycle Bin" />
             <h1 className="mt-1 mb-[15px]">Recycle Bin</h1>
           </div>
         </Draggable>
