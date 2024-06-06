@@ -32,6 +32,12 @@ const MyResume = ({ onClose }) => {
     }));
   };
 
+  const [isMaximized, setIsMaximized] = useState(false);
+  
+  const handleMaximize = () => {
+    setIsMaximized(!isMaximized);
+  };
+  
   return (
     <Rnd
       default={{
@@ -40,6 +46,8 @@ const MyResume = ({ onClose }) => {
         width: 650,
         height: 400,
       }}
+      position={isMaximized ? { x: 5, y: 2 } : undefined}
+      size={isMaximized ? { width: '99.10%', height: '93.80%' } : undefined}         
       minWidth={380}
       minHeight={400}
       bounds="parent"
@@ -48,17 +56,17 @@ const MyResume = ({ onClose }) => {
       <div className="flex items-center justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-default">
         <img className="h-[20px] w-[20px] bg-cover cursor-default" src={MyFilesIcon} alt="This PC" />
         <div className="flex text-white cursor-default">My Resume</div>
-        <div className="flex space-x-2 cursor-default">
-          <button className="p-2 rounded cursor-default hover:bg-gray-500">
-            <MinusIcon className="w-4 h-4 text-white" />
-          </button>
-          <button className="p-2 rounded cursor-default hover:bg-gray-500">
-            <PlusSmIcon className="w-4 h-4 text-white" />
-          </button>
-          <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d] cursor-default">
-            <XIcon className="w-4 h-4 text-white" />
-          </button>
-        </div>
+        <div className="flex space-x-2">
+            <button className="p-2 rounded hover:bg-gray-500">
+              <MinusIcon className="w-4 h-4 text-white" />
+            </button>
+            <button onClick={handleMaximize} className="p-2 rounded hover:bg-gray-500">
+              <PlusSmIcon className="w-4 h-4 text-white" />
+            </button>
+            <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">
+              <XIcon className="w-4 h-4 text-white" />
+            </button>
+          </div>
       </div>
 
       <div className='flex items-center cursor-default'>

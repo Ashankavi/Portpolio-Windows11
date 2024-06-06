@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import { XIcon, MinusIcon, PlusSmIcon } from '@heroicons/react/outline';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -8,6 +8,12 @@ import FigmaIcon from '../Assets/MyProject/FigmaIcon.png';
 const UiUxProject = ({ onClose }) => {
   const handleFolderDoubleClick = (link) => {
     window.open(link, '_blank');
+  };
+
+  const [isMaximized, setIsMaximized] = useState(false);
+  
+  const handleMaximize = () => {
+    setIsMaximized(!isMaximized);
   };
 
   const folders = [
@@ -30,6 +36,8 @@ const UiUxProject = ({ onClose }) => {
         width: 850,
         height: 300,
       }}
+      position={isMaximized ? { x: 5, y: 2 } : undefined}
+      size={isMaximized ? { width: '99.10%', height: '93.80%' } : undefined}         
       minWidth={300}
       minHeight={350}
       bounds="parent"
@@ -43,7 +51,7 @@ const UiUxProject = ({ onClose }) => {
             <button className="p-2 rounded hover:bg-gray-500">
               <MinusIcon className="w-4 h-4 text-white" />
             </button>
-            <button className="p-2 rounded hover:bg-gray-500">
+            <button onClick={handleMaximize} className="p-2 rounded hover:bg-gray-500">
               <PlusSmIcon className="w-4 h-4 text-white" />
             </button>
             <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">

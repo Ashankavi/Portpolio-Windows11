@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import { XIcon, MinusIcon, PlusSmIcon } from '@heroicons/react/outline';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -11,9 +11,14 @@ const ReactProject = ({ onClose }) => {
     window.open(link, '_blank');
   };
 
+  const [isMaximized, setIsMaximized] = useState(false);
+  
+  const handleMaximize = () => {
+    setIsMaximized(!isMaximized);
+  };
+
   const folders = [
     { name: 'Business Landing', link: 'https://github.com/Ashankavi/business-react-site', icon: ReactIcons },
-    { name: 'Hospital Website', link: 'https://github.com/Ashankavi/hospital-website', icon: ReactIcons },
     { name: 'My Portfolio', link: 'https://github.com/Ashankavi/My-Main-Portfolio', icon: ReactIcons },
     { name: 'Hfs Website', link: 'https://github.com/Ashankavi/HFS-Official-Site', icon: ReactIcons },
     { name: 'Photographer', link: 'https://github.com/Ashankavi/photographer-portfolio', icon: ReactIcons },
@@ -32,6 +37,8 @@ const ReactProject = ({ onClose }) => {
         width: 850,
         height: 300,
       }}
+      position={isMaximized ? { x: 5, y: 2 } : undefined}
+      size={isMaximized ? { width: '99.10%', height: '93.80%' } : undefined}         
       minWidth={300}
       minHeight={350}
       bounds="parent"
@@ -45,7 +52,7 @@ const ReactProject = ({ onClose }) => {
             <button className="p-2 rounded hover:bg-gray-500">
               <MinusIcon className="w-4 h-4 text-white" />
             </button>
-            <button className="p-2 rounded hover:bg-gray-500">
+            <button onClick={handleMaximize} className="p-2 rounded hover:bg-gray-500">
               <PlusSmIcon className="w-4 h-4 text-white" />
             </button>
             <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">

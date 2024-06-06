@@ -26,6 +26,12 @@ const MyPicture = ({ onClose }) => {
     setEnlargedImage(null);
   };
 
+  const [isMaximized, setIsMaximized] = useState(false);
+  
+  const handleMaximize = () => {
+    setIsMaximized(!isMaximized);
+  };
+
   return (
     <Rnd
       default={{
@@ -34,6 +40,8 @@ const MyPicture = ({ onClose }) => {
         width: 850,
         height: 500,
       }}
+      position={isMaximized ? { x: 5, y: 2 } : undefined}
+      size={isMaximized ? { width: '99.10%', height: '93.80%' } : undefined}          
       minWidth={280}
       minHeight={400}
       bounds="parent"
@@ -47,7 +55,7 @@ const MyPicture = ({ onClose }) => {
             <button className="p-2 rounded hover:bg-gray-500">
               <MinusIcon className="w-4 h-4 text-white" />
             </button>
-            <button className="p-2 rounded hover:bg-gray-500">
+            <button onClick={handleMaximize} className="p-2 rounded hover:bg-gray-500">
               <PlusSmIcon className="w-4 h-4 text-white" />
             </button>
             <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">

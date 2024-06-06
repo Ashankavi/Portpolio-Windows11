@@ -1,6 +1,4 @@
-
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import { XIcon, MinusIcon, PlusSmIcon } from '@heroicons/react/outline';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -11,6 +9,12 @@ import DiskD from '../Assets/ThisPC/discD.png';
 import DiskE from '../Assets/ThisPC/discE.png';
 
 const ThisPC = ({ onClose }) => {
+
+  const [isMaximized, setIsMaximized] = useState(false);
+  
+  const handleMaximize = () => {
+    setIsMaximized(!isMaximized);
+  };
 
   const folders = [
 
@@ -27,6 +31,8 @@ const ThisPC = ({ onClose }) => {
         width: 850,
         height: 400,
       }}
+      position={isMaximized ? { x: 5, y: 2 } : undefined}
+      size={isMaximized ? { width: '99.10%', height: '93.80%' } : undefined}       
       minWidth={380}
       minHeight={100}
       bounds="parent"
@@ -40,7 +46,7 @@ const ThisPC = ({ onClose }) => {
             <button className="p-2 rounded hover:bg-gray-500">
               <MinusIcon className="w-4 h-4 text-white" />
             </button>
-            <button className="p-2 rounded hover:bg-gray-500">
+            <button onClick={handleMaximize} className="p-2 rounded hover:bg-gray-500">
               <PlusSmIcon className="w-4 h-4 text-white" />
             </button>
             <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">

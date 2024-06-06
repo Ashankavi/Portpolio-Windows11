@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import { XIcon, MinusIcon, PlusSmIcon } from '@heroicons/react/outline';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -18,6 +18,12 @@ const HtmlProject = ({ onClose }) => {
     { name: 'Fashion Store', link: 'https://github.com/Ashankavi/frontend-internship-test', icon: HTMLIcon },
   ];
 
+    const [isMaximized, setIsMaximized] = useState(false);
+  
+    const handleMaximize = () => {
+      setIsMaximized(!isMaximized);
+    };
+
   return (
     <Rnd
       default={{
@@ -26,6 +32,8 @@ const HtmlProject = ({ onClose }) => {
         width: 850,
         height: 300,
       }}
+      position={isMaximized ? { x: 0, y: 0 } : undefined}
+      size={isMaximized ? { width: '100%', height: '100%' } : undefined}
       minWidth={300}
       minHeight={350}
       bounds="parent"
@@ -39,7 +47,7 @@ const HtmlProject = ({ onClose }) => {
             <button className="p-2 rounded hover:bg-gray-500">
               <MinusIcon className="w-4 h-4 text-white" />
             </button>
-            <button className="p-2 rounded hover:bg-gray-500">
+            <button onClick={handleMaximize} className="p-2 rounded hover:bg-gray-500">
               <PlusSmIcon className="w-4 h-4 text-white" />
             </button>
             <button onClick={onClose} className="p-2 rounded hover:bg-[#eb342d]">
