@@ -36,7 +36,7 @@ const Document = ({ onClose }) => {
       minHeight={300}
       maxHeight={680}
       bounds="parent"
-      className="bg-[#202020] border-zinc-200 rounded-[10px] shadow-lg"
+      className="bg-[#202020] border-[0.2px] border-[#4b4b4b] rounded-[10px] shadow-lg"
     >
       <div className="flex items-center  justify-between p-2 bg-[#2b2b2b] rounded-t-[10px] border-b cursor-move">
         <img className="h-[20px] w-[20px] bg-cover" src={DocumentIcon} alt="Document" />

@@ -9,10 +9,6 @@ import CVFiles from '../Assets/Desktop/CVFile.png';
 import AboutMeIcon from '../Assets/Desktop/aboutme.png';
 import ReactIcons from './Assets/MyProject/reactIcon.png';
 
-import ReactProject from '../components/My-Project-Folder/ReactProject'; 
-import UiUxProject from '../components/My-Project-Folder/UiUxProject'; 
-import HtmlProject from '../components/My-Project-Folder/HtmlProject'; 
-
 const icons = {
   thisPC: ThisPCIcon,
   myFiles: MyFilesIcon,
@@ -51,14 +47,14 @@ const Taskbar = ({ openWindows }) => {
       </div>
 
       {/* Center Section */}
-      <div className="absolute flex items-center space-x-4 transform -translate-x-1/2 left-1/2">
-        <FaWindows className="w-7 h-7  text-white hover:text-[#0b46d4]" />
+      <div className="absolute flex items-center space-x-4 transform -translate-x-1/2 left-1/2 hover:bg-[#d6d6d638] ">
+        <FaWindows className="w-7 h-7  text-white hover:text-[#0b46d4] " />
         {/* Render open folder icons and names */}
         {Object.keys(openWindows).map(
           (window) =>
             openWindows[window] && (
               <div key={window} className="flex items-center space-x-2">
-                <img src={icons[window]} alt={names[window]} className="w-5 h-5" />
+                <img src={icons[window]} alt={names[window]} className="w-5 h-5 " />
                 <span>{names[window]}</span>
               </div>
             )
@@ -66,7 +62,7 @@ const Taskbar = ({ openWindows }) => {
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center space-x-4 py-[5px] px-[10px]  hover:bg-[#d6d6d638]">
+      <div className="flex items-center space-x-4 py-[5px] px-[10px] hover:bg-[#d6d6d638]">
     
         <div className="flex flex-col leading-[15px] text-[12px]  items-center ">
           <span>{time}</span>

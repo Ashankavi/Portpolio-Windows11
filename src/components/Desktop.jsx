@@ -44,7 +44,7 @@ const Desktop = () => {
   };
 
   return (
-    <div className="relative flex flex-row w-auto h-[100vh] bg-cover" style={{ backgroundImage: `url(${Wallpaper})` }}>
+    <div className=" flex flex-row w-auto h-[100vh] bg-cover min-w-[450px]" style={{ backgroundImage: `url(${Wallpaper})` }}>
       <div className="flex flex-col flex-wrap text-white text-[12px] space-y-2 p-4 ">
         <Draggable>
           <div className="flex flex-col items-center pt-5 pl-5 pr-5 ml-[-18px] hover:bg-gray-500" onDoubleClick={() => handleOpen('thisPC')}>
