@@ -35,7 +35,7 @@ const MyProjects = ({ onClose }) => {
         default={{
           x: 50,
           y: 100,
-          width: 280,
+          width: 450,
           height: 350,
         }}
         minWidth={280}
